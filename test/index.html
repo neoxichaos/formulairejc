@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+
+	<title>Javascript</title>
+		<style type="text/css">
+		label{
+			display: block;
+			min-width: 300px;
+		}
+		input{
+						display: block;
+			min-width: 300px;
+		}
+		textarea{
+						display: block;
+			min-width: 300px;
+		}
+	</style>
+</head>
+<body>
+	<form method="post" action="traitement.php">
+
+		<label for="firstname">Entrez votre nom :</label>
+		<input type="text" name="firstname" id="name" placeholder="Votre nom" required >
+		<span id="error_name"></span><br/>
+
+		<label for="lastname">Entrez votre prenom :</label>
+		<input type="text" name="prenom" id="lastname" placeholder="Votre prenom" required >
+		<span id="error_lastname"></span><br/>
+
+		<input type="submit" value="Envoyer" id="bouton_envoi" />
+
+
+	</form>
+<script src="js/script.js"></script>
+</body>
+</html>	
