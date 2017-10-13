@@ -1,51 +1,48 @@
-<Doctype html>
 <!DOCTYPE html>
 <html>
 <head>
 	<meta charset="utf-8">
+    <link rel="stylesheet" href="css/style.css">
 	<title>Javascript</title>
-	<style type="text/css">
-		label{
-			display: block;
-			min-width: 300px;
-		}
-		input{
-						display: block;
-			min-width: 300px;
-		}
-		textarea{
-						display: block;
-			min-width: 300px;
-		}
-	</style>
+
 </head>
 <body>
-	<h1>les formulaire en js</h1>
-	<form method="post" action="traitement.php">
+    <header></header>
+    <div class="wrapper">
+       <div class="container">
+            <div class="row">
+                   <div>
+                    <h5 class="titre">les formulaire en js</h5>
+                    <form method="POST" action="traitement.php" id="form">
+                        <div class="group-form ">
+                            <input type="text" name="name" id="name" placeholder="Votre Nom" >
+                            <span id="no_name"></span><br/>
+                            <input type="text" name="first_name" id="first_name" placeholder="Votre Prenom" >
+                        </div>
+                        <div class="group-form">
+                            <input type="text" name="cp" id="cp" placeholder="Votre code postal" />
 
-		<label for="name">Entrez votre nom :</label>
-		<input type="text" name="name" id="name" placeholder="Votre Nom" >
-		<span id="no_name"></span><br/>
 
-		<label for="first_name">Entrez votre prenom :</label>
-		<input type="text" name="first_name" id="first_name" placeholder="Votre Prenom" >
+                            <input type="text" name="ville" id="ville" placeholder="Votre ville" >
+                        </div>
 
-		<label for="cp" id="cp">Entrez votre code postal :</label>
-		<input type="text" name="cp" id="cp" placeholder="Votre code postal" />
+                        <div class="group-form column">
+                        <input type="email" name="mail" id="mail" placeholder="Votre email" >
 
-		<label for="ville" id="ville">Entrez votre ville :</label>
-		<input type="text" name="ville" id="ville" placeholder="Votre ville" >
 
-		<label for="mail" id="mail">Entrez votre email :</label>
-		<input type="email" name="mail" id="mail" placeholder="Votre email" >
+                        <textarea name="precisions" id="precisions" placeholder="Votre message" rows="5"></textarea>
 
-		<label for="precisions" id="precisions">message :</label>
-		<textarea name="precisions" id="precisions" placeholder="Votre message" ></textarea>
+                        <input type="submit" value="Envoyer" id="bouton_envoi" />
+                        </div>
 
-		<input type="submit" value="Envoyer" id="bouton_envoi" />
-
-	</form>
-
+                    </form>
+                </div>
+                <div>
+                uhuuh      
+                </div>
+           </div>    
+        </div>
+    </div>
 
 	<script src="../js/script.js">
 		

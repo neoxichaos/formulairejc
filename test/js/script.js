@@ -28,3 +28,16 @@ function f_valid (e){
 }
 
 
+firstname.addEventListener('blur', verifName)
+
+function verifName(){
+
+	if(firstname.value == ""){
+		firstname.style.border = "1px solid red";
+
+	}else{
+		firstname.style.border = "1px solid green";
+
+	}
+	
+}

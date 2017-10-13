@@ -1,15 +1,43 @@
 var validation = document.getElementById('bouton_envoi');
-var name = document.getElementById('name');
-var no_name =document.getElementById('no_name');
+var firstname = document.getElementById('name');
+var nameFalse =document.getElementById('error_name');
+var name_validate = /^[a-zA-Z-éèêîÉÈÊËÍÌÎ][a-zéèêàçî]+([-'\s][a-zA-Z-éèêîÉÈÊËÍÌÎ][a-zéèêàçî]+)?/;
 
-validation.addEventListener('clic', f_valid);
+var lastname = document.getElementById('lastname');
+var error_lastname= document.getElementById('error_lastname');
+var prenom_validate = /^[a-zA-Z-éèêîÉÈÊËÍÌÎ][a-zéèêàçî]+([-'\s][a-zA-Z-éèêîÉÈÊËÍÌÎ][a-zéèêàçî]+)?/;
+
+
+validation.addEventListener('click', f_valid);
 
 function f_valid (e){
-
-	if (nom.valdity.valueMissing){
-		e.preventDefault();
-		no_name.textContent = 'Nom manquant';
-		no_name.style.color ='red';
+	e.preventDefault();
+	if (firstname.validity.valueMissing){
+		error_name.textContent = 'veuillez remplir le champ par votre nom';
+		error_name.style.color ='red';
+	}else if (name_validate.test(firstname.value) == false) {
+		nameFalse.textContent = 'format incorrect';
+		nameFalse.style.color = 'orange';
+	}else if (lastname.validity.valueMissing){
+		error_lastname.textContent = 'Prenom manquant';
+		error_lastname.style.color ='red';
+	}else if (prenom_validate.test(lastname.value) == false) {
+		error_lastname.textContent = 'format incorrect';
+		error_lastname.style.color = 'orange';
 	}
+}
 
+
+firstname.addEventListener('blur', verifName)
+
+function verifName(){
+
+	if(firstname.value == ""){
+		firstname.style.border = "1px solid red";
+
+	}else{
+		firstname.style.border = "1px solid green";
+
+	}
+	
 }
